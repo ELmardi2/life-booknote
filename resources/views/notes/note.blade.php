@@ -1,5 +1,4 @@
 @extends('defaults.default')
-
 @section('title', 'notes-page') <!--page title-->
 @section('content') <!--start content section-->
 <h1 class="text-center mt-5"> Welcome to your notes  page!!!</h1>
@@ -44,7 +43,9 @@
 @endforeach <!--End foreach -->
  <!-- the rest pages --> 
 @else
-<div class="alert alert-info text-center"> <strong>OH Sorry There is No Notes To Show For The Moment !!!!!!!</strong> </div>
+<div class="alert alert-info text-center">
+     <strong>OH Sorry There is No Notes To Show For The Moment !!!!!!!</strong> 
+</div>
 @endif <!-- End If -->
 
 @stop <!--End content section-->

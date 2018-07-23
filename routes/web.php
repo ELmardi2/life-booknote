@@ -25,7 +25,6 @@ Route::get('/contact', 'PagesController@Contact');
 
 //Route to Articles
 Route::resource('/articles', 'ArticleController');
-
 //Route to Stories
 Route::resource('/stories', 'StoryController');
 //Route to Vedio

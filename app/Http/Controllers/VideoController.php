@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Video;
 use App\user;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class VideoController extends Controller
 {
@@ -20,7 +21,7 @@ class VideoController extends Controller
      */
     public function index()
     {
-        $videos = Video::all();
+        $videos = Video::where('status', 1)->orderBy('id', 'desc')->paginate(3);
         return view('videos.index', ['videos' => $videos]);
     }
 
@@ -42,7 +43,30 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'bail | required | min: 4',
+            'file' => 'bail | required ',
+            'status' => 'bail | required',
+        ]);
+         // Get the currently authenticated user...
+         $user = Auth::user();
+         $status = array([0, 1]);
+         $request->file('thumbnail')->move(public_path('videos'), $request->file('thumbnail')->getClientOriginalName());
+
+    $video->thumbnail = public_path('upload') . '/' .
+     $request->file('thumbnail')->user_id -> auth()->id();
+  
+    $video->save();
+    /*
+       video::create([
+           'title' =>$request->title,
+           'video' =>$request->video,
+           'status' =>$request->status,
+           'user_id' => auth()->id()
+       ]); */
+       session()->flash('message', 'your story has been successfully added');
+       return redirect(route('videos.index'));
+   
     }
 
     /**
@@ -64,7 +88,7 @@ class VideoController extends Controller
      */
     public function edit(Video $video)
     {
-        //
+        return view('videos.show', ['video' => $video]);
     }
 
     /**

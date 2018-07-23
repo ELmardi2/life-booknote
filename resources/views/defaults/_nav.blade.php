@@ -1,8 +1,8 @@
 <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel bg-info">
                 <div class="container">
-                        <a class="navbar-brand" href="{{ url('/') }}">
-                            {{ config('app.name', 'Life-booknote') }}
+                        <a class="navbar-brand logo" href="{{ url('/') }}">
+                            <img src="{{asset('images/sslogo.png')}}" alt="logo" width=190px; height=80px;>
                         </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>

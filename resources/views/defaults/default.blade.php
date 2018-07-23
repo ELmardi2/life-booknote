@@ -24,15 +24,17 @@
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/bootstrap.css')}}" />
 </head>
 <body>
-   <div class="container">
-       @include('defaults._nav')
-   @yield('content')
+   <div class="container"> <!-- Start container -->
+    <!-- Include navbar -->
+    @include('defaults._nav') 
+    <!-- Yield to show the content of the section -->
+    @yield('content') 
 
+
+    <!-- Footer -->
    <footer id="footer" class=" bg-dark text-white p-4 mt-5 text-center">
         <p>All rights reserved to Elmardi yahia &copy {{date('Y')}}</p>
       </footer>
-   </div>
-
- 
+   </div> <!-- End container -->
 </body>
 </html>

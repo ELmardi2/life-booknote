@@ -18,11 +18,10 @@ class CreateStoriesTable extends Migration
             $table->unsignedInteger('user_id');
             $table->string('title');
             $table->longText('detail');
-            $table->boolean('status')->default(0);
+            $table->boolean('status', [0 =>'private', 1 =>'public']);
             $table->timestamps();
             
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-
         });
     }
 
@@ -33,6 +32,6 @@ class CreateStoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('stories');
+        Schema::dropIfExists('stories', 'user_id');
     }
 }

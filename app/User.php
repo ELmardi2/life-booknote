@@ -32,6 +32,11 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Story');
     }
+     //relation between user table and video stories table 
+     public function videos()
+     {
+         return $this->hasMany('App\Video');
+     }
     //relation between user table and articles table 
     public function articles()
     {

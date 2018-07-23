@@ -23,7 +23,7 @@ class StoryController extends Controller
     public function index()
     {
         //declaration of variable stories and get the stories from data base
-        $stories = Story::orderBy('id', 'desc')->paginate(2);
+        $stories = Story::where('status', 1)->orderBy('id', 'desc')->paginate(5);
         return view('stories.stories', ['stories' =>$stories]);
     }
 
@@ -47,14 +47,16 @@ class StoryController extends Controller
     {
         $this->validate($request, [
             'title' => 'bail | required | min: 4',
-            'detail' => 'bail | required | min: 10'
+            'detail' => 'bail | required | min: 10',
+            'status' => 'bail | required',
         ]);
          // Get the currently authenticated user...
          $user = Auth::user();
-
+         $status = array([0, 1]);
        Story::create([
            'title' =>$request->title,
            'detail' =>$request->detail,
+           'status' =>$request->status,
            'user_id' => auth()->id()
        ]);
        session()->flash('message', 'your story has been successfully added');

@@ -30,9 +30,9 @@
     <textarea name="detail" id="detail" class="form-control" cols="30" rows="10"></textarea>
 </div>
 <div class="form-group">
-    <select name="status" id="">
-        <option value="true">public</option>
-        <option value="true">Private</option>
+    <select name="status" id="status">
+        <option value="1">Public</option>
+        <option value="0">Private</option>
     </select>
 </div>
 <div class="form-group">

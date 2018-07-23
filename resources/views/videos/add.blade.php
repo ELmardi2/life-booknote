@@ -31,10 +31,6 @@
 <hr>
 <video id="video"></video>
 <canvas id="canvas" style="display:none;"></canvas>
-<div id="buttoncontent">
-        <button id="startbutton" class="btn btn-primary "  >CAPTURE</button>
-        <button type="submit" id="cancel" class="btn btn-primary  cancel">Next</button>
-</div>
 <hr>
 <div class="form-group">
     <select name="status" id="">
