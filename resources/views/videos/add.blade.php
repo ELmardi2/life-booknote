@@ -25,7 +25,7 @@
     <input type="text" name="title" id="title" class="form-control" placeholder="type your title here">
 </div>
 <div class="form-group">
-    <label for="detail">Video </label>
+    <label for="video">Video </label>
     <input type="file" name="video" accept="video/*" capture>
 </div>
 <hr>
@@ -34,8 +34,8 @@
 <hr>
 <div class="form-group">
     <select name="status" id="">
-        <option value="false">public</option>
-        <option value="true">Private</option>
+        <option value="1">public</option>
+        <option value="0">Private</option>
     </select>
 </div>
 <div class="form-group">

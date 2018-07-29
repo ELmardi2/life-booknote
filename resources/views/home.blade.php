@@ -1,6 +1,9 @@
 @extends('defaults.default')
 @section('content')
 <div class="container">
+        <h3 class="text-center pt-5">
+                Welcome <strong>{{ Auth::user()->name }}</strong> To Your Profil In  Life-booknote
+            </h3>
     <div class="row">
             <div class="col-md-5">
                     <div class="card">
@@ -18,9 +21,6 @@
                                     {{ session('status') }}
                                 </div>
                             @endif
-                            <h3>
-                                Welcome <strong>{{ Auth::user()->name }}</strong> To Histo-Act
-                            </h3>
                                 <h4>Your Articles</h4>
                                 <table class="table table-striped">
                                     <thead>
@@ -75,9 +75,6 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-                        <h3>
-                            Welcome <strong>{{ Auth::user()->name }}</strong> To Histo-Act
-                        </h3>
                             <h4>Your histories</h4>
                             <table class="table table-striped">
                                 <thead>
@@ -136,9 +133,6 @@
                                     {{ session('status') }}
                                 </div>
                             @endif
-                            <h3>
-                                Welcome <strong>{{ Auth::user()->name }}</strong> To Histo-Act
-                            </h3>
                                 <h4>Your Notes</h4>
                                 <table class="table table-striped">
                                     <thead>
@@ -193,9 +187,6 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <h3>
-                        Welcome <strong>{{ Auth::user()->name }}</strong> To Histo-Act
-                    </h3>
                         <h4>Your videos histories</h4>
                 </div>
             </div>
