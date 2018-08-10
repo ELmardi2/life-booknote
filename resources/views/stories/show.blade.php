@@ -14,6 +14,20 @@
         </p>
     </div>
 </div>
+<div class="text-center m-3 pt-4">
+    <a href="http://">
+        <i class="fa fa-instagram fa-4x" ></i>
+    </a>
+    <a href="http://">
+        <i class="fa fa-facebook fa-4x" ></i>
+    </a>
+    <a href="http://">
+        <i class="fa fa-youtube fa-4x" ></i>
+    </a>
+    <a href="http://">
+        <i class="fa fa-pinterest fa-4x" ></i>
+    </a>
+</div>
 <hr>
 @if (!Auth::guest() && (Auth::user()->id == $story->user_id))
 <a  href="{{route('stories.edit', $story->id)}}" class="btn btn-secondary">

@@ -28,7 +28,7 @@ Route::resource('/articles', 'ArticleController');
 //Route to Stories
 Route::resource('/stories', 'StoryController');
 //Route to Vedio
-Route::resource('videos', 'VideoController');
+Route::resource('/videos', 'VideoController');
 //Route to Notes
 Route::resource('/notes', 'NoteController');
 //auth route

@@ -1,9 +1,11 @@
 @extends('defaults.default')
 @section('content')
 <div class="container">
-        <h3 class="text-center pt-5">
-                Welcome <strong>{{ Auth::user()->name }}</strong> To Your Profil In  Life-booknote
-            </h3>
+       <div class="card-header">
+            <h3 class="text-center pt-5">
+                    Welcome <strong>{{ Auth::user()->name }}</strong> To Your Profil In  Life-booknote
+                </h3>
+       </div>
     <div class="row">
             <div class="col-md-5">
                     <div class="card">
@@ -105,11 +107,11 @@
                                          </form>
                                         </td>
                                         </tr>
-                                        @endforeach <!-- End foreach history -->
+                                        @endforeach <!-- End foreach history -->  
                                         @else
                                             <div class="alert alert-info text-center"> <strong>OH Sorry There is No Stories To Show For The Moment !!!!!!!</strong> </div>
                                             @endif <!-- End If history count-->
-                                        <!--the rest of the histories -->
+                                        
                                 </tbody>
                             </table>
                     </div>

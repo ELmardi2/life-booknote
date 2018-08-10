@@ -21,8 +21,8 @@ class VideoController extends Controller
      */
     public function index()
     {
-       // $videos = Video::where('status', 1)->orderBy('id', 'desc')->paginate(3);
-        //return view('videos.index', ['videos' => $videos]);
+        $videos = Video::where('status', 1)->orderBy('id', 'desc')->paginate(3);
+        return view('videos.index', ['videos' => $videos]);
     }
 
     /**
@@ -32,7 +32,7 @@ class VideoController extends Controller
      */
     public function create()
     {
-        //return view('videos.add');
+        return view('videos.add');
     }
 
     /**
@@ -45,14 +45,13 @@ class VideoController extends Controller
     {
         $this->validate($request, [
             'title' => 'bail | required | min: 4',
-            'file' => 'bail | required ',
-            'status' => 'bail | required',
         ]);
+        //'video' => 'bail | required |maxsize: 50m',
          // Get the currently authenticated user...
-         $user = Auth::user();
-         $status = array([0, 1]);
-    
-   
+
+        //  $status = array([0, 1]);
+
+       
     }
 
     /**
@@ -63,7 +62,7 @@ class VideoController extends Controller
      */
     public function show(Video $video)
     {
-        //
+       return view('videos.show');
     }
 
     /**

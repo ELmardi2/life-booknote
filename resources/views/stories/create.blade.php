@@ -4,7 +4,7 @@
 @section('title', 'create-history')
 
 @section('content')
-<h1 class="my-5 text-center">Add Av Story</h1>
+<h1 class="my-5 text-center">Add Story</h1>
 @if ($errors->all())
 <div class="alert-danger">
         @foreach ($errors->all() as $error)
@@ -36,7 +36,7 @@
     </select>
 </div>
 <div class="form-group">
-<button type="submit" class="btn btn-outline-primary"> Add An Story</button>
+<button type="submit" class="btn btn-outline-primary"> Add Story</button>
 </div>
 </form>
 @stop
