@@ -21,9 +21,14 @@ class NoteController extends Controller
      */
     public function index()
     {
-        //$notes = Note::orderBy('id', 'desc')->paginate(3);
-        $notes = Note::with('user')->where('user_id', Auth::user()->id)->orderBy('id', 'desc')->paginate(3);
+        //DB::connection()->enableQueryLog();
+       // $notes = Note::orderBy('id', 'desc')->paginate(3);
+        $notes = Note::with('user')
+        ->where('user_id', Auth::user()->id)
+        ->orderBy('id', 'desc')
+        ->paginate(4);
         return view('notes.index', ['notes' => $notes]);
+        print_r(Note::getQueryLog());
     }
 
     /**
