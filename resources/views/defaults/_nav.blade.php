@@ -52,7 +52,7 @@
                                         </li>
                                         <li>
                                             <a href="{{route('home')}}" class=" btn btn-primary"> 
-                                                   <i class="fa fa-home"></i> Back
+                                                   <i class="fa fa-home"></i> Home
                                              </a>
                                         </li>
                                         <li class="divider"></li>
