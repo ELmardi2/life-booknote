@@ -39,7 +39,7 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                         <li>
-                                            <a href="#" class="btn btn-primary">
+                                            <a href="{{route('profile')}}" class=" dropdown-item btn btn-primary">
                                                <i class="fa fa-user"><strong>Profil</strong></i> 
                                             </a>
                                         </li>
@@ -51,9 +51,9 @@
                                         </a>
                                         </li>
                                         <li>
-                                                <a href="{{route('home')}}" class=" btn btn-primary"> 
+                                            <a href="{{route('home')}}" class=" btn btn-primary"> 
                                                    <i class="fa fa-home"></i> Back
-                                                </a>
+                                             </a>
                                         </li>
                                         <li class="divider"></li>
                                     </ul>

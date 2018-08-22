@@ -35,3 +35,8 @@ Route::resource('/notes', 'NoteController');
 Auth::routes();
 // Route to Home
 Route::get('/home', 'HomeController@index')->name('home');
+// Route to Profile
+Route::get('/profile', 'AvatarController@index')->name('profile');
+//Route to photos profile
+Route::resource('/avatar', 'AvatarController');
+
