@@ -14,7 +14,7 @@ class AvatarController extends Controller
      */
     public function index()
     {
-      $avatars = auth()->user()->getMedia();
+      $avatars = auth()->user()->getMedia('avatar');
         return view('profile', compact('avatars'));
     }
 
@@ -25,7 +25,7 @@ class AvatarController extends Controller
      */
     public function create()
     {
-        //
+        //auth()->user()->clearMediaCollection('avatar');
     }
 
     /**
@@ -37,7 +37,7 @@ class AvatarController extends Controller
     public function store(Request $request)
     {
         $user = auth()->user();
-        $user->addMedia($request->avatar)->toMediaCollection();
+        $user->addMedia($request->avatar)->toMediaCollection('avatar');
         return redirect()->back()->with('message', 'your added successfully');
         // $user = Auth()->user();
         // return $request->all();

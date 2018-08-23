@@ -49,4 +49,9 @@ class User extends Authenticatable implements HasMedia
     {
         return $this->hasMany('App\Note');
     }
+    public function registerMediaCollections()
+    {
+        //you can define as much collections as needed
+        $this->addMediaCollection('avatar');
+    }
 }
