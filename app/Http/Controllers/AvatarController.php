@@ -38,7 +38,7 @@ class AvatarController extends Controller
     {
         $user = auth()->user();
         $user->addMedia($request->avatar)->toMediaCollection('avatar');
-        return redirect()->back()->with('message', 'your added successfully');
+        return redirect()->back()->with('message', 'your Photo has been added successfully');
         // $user = Auth()->user();
         // return $request->all();
     }

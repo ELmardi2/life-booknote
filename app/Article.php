@@ -10,6 +10,7 @@ class Article extends Model
         'title', 'details', 'user_id'
     ];
 
+    //relationship between user and his articles
     public function user()
     {
         return $this->belongsTo('App\User');

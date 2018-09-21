@@ -2,7 +2,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel bg-info">
                 <div class="container">
                         <a class="navbar-brand logo" href="{{ url('/') }}">
-                            <img src="{{asset('images/sslogo.png')}}" alt="logo" width=190px; height=80px;>
+                            <img src="{{asset('images/sslogo.png')}}" alt="logo" width=170px; height=65px;>
                         </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -11,27 +11,28 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav mr-auto">
-                                <li>  <a href="{{url('/')}}" class=" btn btn-secondary">Home</a></li>
+                                <li>  <a href="{{url('/')}}" class=" btn btn-secondary">{{ trans('terms.Home') }}</a></li>
                                 &nbsp;
-                                <li><a href="{{url('/about')}}" class=" btn btn-secondary">About</a></li>
+                                <li><a href="{{url('/about')}}" class=" btn btn-secondary">{{ trans('terms.About-us') }}</a></li>
                                 &nbsp;
-                                <li><a href="{{url('/articles')}}" class=" btn btn-secondary">Articles</a></li>
+                                <li><a href="{{url('/articles')}}" class=" btn btn-secondary">{{ trans('terms.Articles') }}</a></li>
                                 &nbsp;
-                                <li><a href="{{url('/stories')}}" class=" btn btn-secondary">Stories</a></li>
+                                <li><a href="{{url('/stories')}}" class=" btn btn-secondary">{{ trans('terms.Stories') }}</a></li>
                                 &nbsp;
-                                <li><a href="{{url('/videos')}}" class=" btn btn-secondary">Video Stories</a></li>
+                                <li><a href="{{url('/videos')}}" class=" btn btn-secondary">{{ trans('terms.Videos') }}</a></li>
                                 &nbsp;
-                                <li><a href="{{url('/notes')}}" class=" btn btn-secondary">Booknotes</a></li>
+                                <li><a href="{{url('/notes')}}" class=" btn btn-secondary">{{ trans('terms.Booknotes') }}</a></li>
                                 &nbsp;
-                                <li><a href="{{url('/contact')}}" class=" btn btn-secondary">Contact-us</a></li>
+                                <li><a href="{{url('/contact')}}" class=" btn btn-secondary">{{ trans('terms.Contact-us') }}</a></li>
                         </ul>
 
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ml-auto">
                             <!-- Authentication Links -->
                             @guest
-                                <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                                <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                                <li><a class="nav-link" href="{{ route('login') }}">{{ trans('terms.Login') }}</a></li>
+                                <li><a class="nav-link" href="{{ route('register') }}">{{ trans('terms.Register') }}</a></li>
+                                
                             @else
                                                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -74,4 +75,14 @@
                     </div>
                 </div>
             </nav>
+    </div>
+    <hr>
+    <!-- Language list -->
+    <div class="nav navbar ">
+            @foreach (LaravelLocalization::getSupportedLocales()  as $key=>$value)
+            <li class="">
+                    <a href="{{ LaravelLocalization::getLocalizedUrl($key) }}">
+                            {{ $value['native'] }}
+            </li>
+    @endforeach
     </div>

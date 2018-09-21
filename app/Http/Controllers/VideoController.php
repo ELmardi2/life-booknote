@@ -6,6 +6,8 @@ use App\Video;
 use App\user;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+
 
 class VideoController extends Controller
 {
@@ -21,8 +23,8 @@ class VideoController extends Controller
      */
     public function index()
     {
-        $videos = Video::where('status', 1)->orderBy('id', 'desc')->paginate(3);
-        return view('videos.index', ['videos' => $videos]);
+        // $videos = Video::where('status', 1)->orderBy('id', 'desc')->paginate(3);
+        // return view('videos.index', ['videos' => $videos]);
     }
 
     /**

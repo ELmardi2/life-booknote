@@ -10,7 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Langauges route
+// app/Http/routes.php
 
+Route::group(['prefix' => LaravelLocalization::setLocale()], function()
+{
+	/** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
 //Route home page
  Route::get('/', 'PagesController@Home');
 
@@ -39,4 +44,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/profile', 'AvatarController@index')->name('profile');
 //Route to photos profile
 Route::resource('/avatar', 'AvatarController');
+	
+});
 
