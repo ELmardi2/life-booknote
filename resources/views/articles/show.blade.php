@@ -6,7 +6,6 @@
 @auth
 <a href="{{url('/home')}}" class=" btn btn-primary"> Back</a>
 @endauth
-
 @if (session()->has('message')) <!--start session section-->
     <div class="alert alert-success">
         {{session()->get('message')}}

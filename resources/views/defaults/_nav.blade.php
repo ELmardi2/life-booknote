@@ -1,6 +1,6 @@
 <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel bg-info">
-                <div class="container">
+        <nav class="navbar navbar-expand-md navbar-light  navbar-laravel bg-info">
+                <div class="container ">
                         <a class="navbar-brand logo" href="{{ url('/') }}">
                             <img src="{{asset('images/sslogo.png')}}" alt="logo" width=170px; height=65px;>
                         </a>
@@ -8,9 +8,9 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
     
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
                         <!-- Left Side Of Navbar -->
-                        <ul class="navbar-nav mr-auto">
+                        <ul class="navbar-nav mr-auto float">
                                 <li>  <a href="{{url('/')}}" class=" btn btn-secondary">{{ trans('terms.Home') }}</a></li>
                                 &nbsp;
                                 <li><a href="{{url('/about')}}" class=" btn btn-secondary">{{ trans('terms.About-us') }}</a></li>
@@ -62,7 +62,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ trans('terms.Logout') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -78,11 +78,12 @@
     </div>
     <hr>
     <!-- Language list -->
-    <div class="nav navbar ">
+    <div class="navbar ">
             @foreach (LaravelLocalization::getSupportedLocales()  as $key=>$value)
-            <li class="">
+            <li class="btn btn-default">
                     <a href="{{ LaravelLocalization::getLocalizedUrl($key) }}">
-                            {{ $value['native'] }}
+                     {{ $value['native'] }}
+                    </a>
             </li>
     @endforeach
     </div>

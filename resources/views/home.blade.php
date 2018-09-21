@@ -13,7 +13,7 @@
                                     <h4 class="pull-left d-inline-block">Profil</h4>
                                     <h4 class="d-inline-block pull-right btn btn-default btn-sm">
                                             <a href="/articles/create">
-                                                <i class="fa fa-plus"></i> New Article
+                                                <i class="fa fa-plus"></i> @lang('terms.add-n-a')
                                                 </a>
                                     </h4>
                                 </div>
@@ -67,7 +67,7 @@
                         <h4 class="d-inline-block">Profil</h4>
                         <h4 class="d-inline-block pull-right btn btn-default btn-sm">
                                 <a href="/stories/create">
-                                    <i class="fa fa-plus"></i> New Story
+                                    <i class="fa fa-plus"></i> @lang('terms.add-n-h')
                                     </a>
                         </h4>
                     </div>
@@ -125,7 +125,7 @@
                                     <h4 class="pull-left d-inline-block">Profil</h4>
                                     <h4 class="d-inline-block pull-right btn btn-default btn-sm">
                                             <a href="/notes/create">
-                                                <i class="fa fa-plus"></i> New Note
+                                                <i class="fa fa-plus"></i> @lang('terms.add-n-n')
                                                 </a>
                                     </h4>
                                 </div>
@@ -179,7 +179,7 @@
                     <h4 class="d-inline-block">Profil</h4>
                     <h4 class="d-inline-block pull-right btn btn-default btn-sm">
                             <a href="/videos/create">
-                                <i class="fa fa-plus"></i> New Video Story
+                                <i class="fa fa-plus"></i> @lang('terms.add-n-v')
                                 </a>
                     </h4>
                 </div>
