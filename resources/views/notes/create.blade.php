@@ -1,5 +1,5 @@
 @extends('defaults.default')
-@section('title', 'create-notes') <!-- Start if messages -->
+@section('title', 'create-notes') <!-- Page title -->
 @section('content') <!--Start section content-->
 <h1 class="my-5 text-center">Add A New Note</h1>
 @if ($errors->all()) <!-- Start if errors -->
@@ -10,7 +10,7 @@
          </li> 
      @endforeach
 </div>
-@endif <!-- Start if errors -->
+@endif <!-- End if errors -->
 @if (session()->has('message'))<!-- Start if messages -->
     <div class="alert alert-success">
         {{session()->get('message')}}
