@@ -20,7 +20,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/app.css')}}" />
-    <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/custom.css')}}" /
+    <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/custom.css')}}" />
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/bootstrap.css')}}" />
 </head>
 <body>
