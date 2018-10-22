@@ -44,12 +44,11 @@
     </div>
     </div>  
 @endforeach <!--endforeach -->
-
 <!--the rest of the histories -->
 {{$stories->links()}}
 
 @else
-<div class="alert alert-info text-center"> <strong>OH Sorry There is No History To Show For The Moment !!!!!!!</strong> </div>
+<div class="alert alert-info text-center"> <strong>OH Sorry There is No Story To Show For The Moment !!!!!!!</strong> </div>
 @endif <!-- End If history count-->
 
 @endsection <!--end content section -->

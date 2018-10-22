@@ -26,11 +26,8 @@
 </div>
 <div class="form-group">
     <label for="video">Video </label>
-    <input type="file" name="video" accept="video/*" capture>
 </div>
-<hr>
-<video id="video"></video>
-<canvas id="canvas" style="display:none;"></canvas>
+
 <hr>
 <div class="form-group">
     <select name="status" id="">

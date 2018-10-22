@@ -2,7 +2,7 @@
 
 @section('title', 'articles-page') <!--page title-->
 @section('content') <!--start content section-->
-<h1 class="text-center mt-5"> Welcome to articles  page!!!</h1>
+<h1 class="text-center mt-5"> @lang('terms.welcome-to') </h1>
 @auth
 <a href="{{url('/home')}}" class=" btn btn-primary"> Back</a>
 @endauth

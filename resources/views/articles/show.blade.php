@@ -6,7 +6,6 @@
 @auth
 <a href="{{url('/home')}}" class=" btn btn-primary"> Back</a>
 @endauth
-
 @if (session()->has('message')) <!--start session section-->
     <div class="alert alert-success">
         {{session()->get('message')}}
@@ -39,11 +38,19 @@
      </form>
      @endif  
 <!--End show buttons edit&delete section-->
+<div id="links" class="text-center">
 <!--share links -->
-<a href="https://www.facebook.com/sharer/sharer.php?u="><i class="fa fa-facebook fa-4x "></i></a>
-<a href="https://www.facebook.com/sharer/sharer.php?u="><i class="fa fa-youtube fa-4x "></i></a>
-<a href="https://www.facebook.com/sharer/sharer.php?u="><i class="fa fa-instagram fa-4x "></i></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=">
+    <i class="fa fa-facebook fa-4x"></i>
+</a>
+<a href="https://www.youtube.com/sharer/sharer.php?u=">
+    <i class="fa fa-youtube fa-4x "></i>
+</a>
+<a href="https://help.instagram.com/sharer">
+    <i class="fa fa-instagram fa-4x"></i>
+</a>
 <!-- End  share link -->
+</div>
 <!-- Start Comment show -->
 <h2 class="text-center">Comments</h2>
 

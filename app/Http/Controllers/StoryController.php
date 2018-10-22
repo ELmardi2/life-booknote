@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Story;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -101,6 +100,8 @@ class StoryController extends Controller
         $story->title = $request->title;
         $story->detail = $request->detail;
         $userId = Auth::id();
+        $status = array([0, 1]);
+        
         if ($story->user_id !== $userId) {
             session()->flash('error', 'Sorry that it is not your story !! you can not edit it');
             return redirect('/stories');
