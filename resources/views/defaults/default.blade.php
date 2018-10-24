@@ -20,6 +20,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/app.css')}}" />
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/custom.css')}}" />
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/bootstrap.css')}}" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="{{url('/') }}/css/lang_{{ LaravelLocalization::getCurrentLocale() }}.css" />
 </head>
 <body>
