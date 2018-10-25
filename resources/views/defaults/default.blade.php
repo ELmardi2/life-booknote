@@ -21,6 +21,9 @@
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/custom.css')}}" />
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/bootstrap.css')}}" />
     <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- BOOTSTRAP -->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"> </script>
     <link rel="stylesheet" type="text/css" media="screen" href="{{url('/') }}/css/lang_{{ LaravelLocalization::getCurrentLocale() }}.css" />
 </head>
 <body>
